@@ -1,0 +1,32 @@
+{
+    "name": "phpfacile/data-package-table-schema-db",
+    "description": "data package/table schema related services for database access",
+    "keywords": ["data package", "table schema", "database"],
+    "homepage": "https://github.com/phpfacile/data-package-table-schema-db",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "PHP Facile!",
+            "homepage": "https://www.phpfacile.com/"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.2",
+        "squizlabs/php_codesniffer": "3.*"
+    },
+    "autoload": {
+        "psr-4": {
+          "PHPFacile\\DataPackage\\TableSchema\\Db\\": "src/"
+        }
+    },
+    "scripts": {
+        "cs-check": "phpcs -s src",
+        "cs-check-psr": "phpcs -s --standard=PSR1,PSR2 src",
+        "cs-check-pear": "phpcs -s --standard=PEAR src",
+        "cs-fix": "phpcbf src",
+        "test": "phpunit --colors=always --testsuite \"all tests\""
+    }
+}
